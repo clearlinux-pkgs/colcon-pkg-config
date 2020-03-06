@@ -4,7 +4,7 @@
 #
 Name     : colcon-pkg-config
 Version  : 0.1.0
-Release  : 8
+Release  : 9
 URL      : https://files.pythonhosted.org/packages/7c/3f/9979f90a2dc5fe5da4341fab6c3035aaf885f2bf7177fc9de1ea36f3eacb/colcon-pkg-config-0.1.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/7c/3f/9979f90a2dc5fe5da4341fab6c3035aaf885f2bf7177fc9de1ea36f3eacb/colcon-pkg-config-0.1.0.tar.gz
 Summary  : Extension for colcon adding an environment variable to find pkg-config files.
@@ -17,10 +17,7 @@ BuildRequires : buildreq-distutils3
 BuildRequires : colcon-core
 
 %description
-colcon-pkg-config
 ===================
-
-An extension for `colcon-core <https://github.com/colcon/colcon-core>`_ to set an environment variable to find pkg-config files.
 
 %package python
 Summary: python components for the colcon-pkg-config package.
@@ -35,7 +32,8 @@ python components for the colcon-pkg-config package.
 Summary: python3 components for the colcon-pkg-config package.
 Group: Default
 Requires: python3-core
-Provides: pypi(colcon-pkg-config)
+Provides: pypi(colcon_pkg_config)
+Requires: pypi(colcon_core)
 
 %description python3
 python3 components for the colcon-pkg-config package.
@@ -50,8 +48,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1582910457
-# -Werror is for werrorists
+export SOURCE_DATE_EPOCH=1583528413
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$CFLAGS -fno-lto "
